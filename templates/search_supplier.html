@@ -1,0 +1,42 @@
+
+{% include 'nav.html' %}
+<h3>Search Supplier</h3>
+
+<form method="post">
+Supplier:
+<input type="text" name="supplier">
+
+File Name:
+<input type="text" name="file_name" placeholder="example: feb2026">
+
+<button type="submit">Search</button>
+</form>
+
+<table>
+<tr>
+<th>Department</th>
+<th>Supplier</th>
+<th>Amount</th>
+<th>Cheque</th>
+<th>File</th>
+</tr>
+
+{% for r in results %}
+<tr>
+<td>{{ r['Department'] }}</td>
+<td>{{ r['Supplier Name'] }}</td>
+<td>
+<details>
+<summary>{{ r['Total Amount'] }}</summary>
+<ul>
+{% for val in r['Breakdown'] %}
+<li>{{ val }}</li>
+{% endfor %}
+</ul>
+</details>
+</td>
+<td>{{ r['Cheque number'] }}</td>
+<td>{{ r['Uploaded File'] }}</td>
+</tr>
+{% endfor %}
+</table>

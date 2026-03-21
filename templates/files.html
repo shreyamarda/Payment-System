@@ -1,0 +1,9 @@
+
+{% include 'nav.html' %}
+<h3>Uploaded Files</h3>
+
+<ul>
+{% for f in files %}
+<li>{{ f }}</li>
+{% endfor %}
+</ul>

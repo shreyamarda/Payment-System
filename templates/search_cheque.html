@@ -1,0 +1,31 @@
+
+{% include 'nav.html' %}
+<h3>Search Cheque</h3>
+
+<form method="post">
+Cheque:
+<input type="text" name="cheque">
+<button type="submit">Search</button>
+</form>
+
+<table>
+<tr>
+<th>Department</th>
+<th>Supplier</th>
+<th>Amount</th>
+<th>Cheque</th>
+<th>File</th>
+<th>Date</th>
+</tr>
+
+{% for r in results %}
+<tr>
+<td>{{ r['Department'] }}</td>
+<td>{{ r['Supplier Name'] }}</td>
+<td>{{ r['Total Amount'] }}</td>
+<td>{{ r['Cheque number'] }}</td>
+<td>{{ r['Uploaded File'] }}</td>
+<td>{{ r['Upload Date'] }}</td>
+</tr>
+{% endfor %}
+</table>

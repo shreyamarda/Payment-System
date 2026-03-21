@@ -1,0 +1,28 @@
+# Python
+__pycache__/
+*.pyc
+
+# Virtual environment
+venv/
+env/
+uploads/
+
+# Environment variables
+.env
+
+# Data files (IMPORTANT)
+*.xlsx
+*.xls
+*.csv
+*.json
+
+# Database
+*.db
+*.sqlite3
+
+# Logs
+*.log
+
+# IDE
+.vscode/
+.idea/
