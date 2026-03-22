@@ -57,7 +57,7 @@ This project reflects practical implementation of real business workflow automat
 ## ▶️ How to Run Locally
 
 1. Clone the repository
-   git clone https://github.com/your-username/Payment-System.git
+   git clone https://github.com/shreyamarda/Payment-System.git
 
 2. Navigate to project folder
    cd Payment-System
