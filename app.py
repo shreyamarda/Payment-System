@@ -14,9 +14,19 @@ os.makedirs(UPLOAD_FOLDER, exist_ok=True)
 
 def get_formula_breakdown(formula):
     if isinstance(formula, str) and formula.startswith("="):
-        formula = formula.replace("=", "")
-        nums = re.findall(r'\d+\.?\d*', formula)
-        return nums
+        formula = formula.replace("=", "").replace(" ", "")
+
+        nums = re.findall(r'[+-]?\d+\.?\d*', formula)
+
+        cleaned = []
+        for n in nums:
+            if n.startswith("+"):
+                cleaned.append(n[1:])
+            else:
+                cleaned.append(n)
+
+        return cleaned
+
     return []
 
 
